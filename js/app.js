@@ -15,6 +15,11 @@ function adicionar() {
     var subTotal = valorProduto * quantidade; // Calcula o subtotal
     var carrinho = document.getElementById('lista-produtos'); // Obtém o elemento do carrinho
 
+    if (quantidade <= 0 || quantidade == '' || quantidade == null || quantidade == undefined) {
+        alert('Selecione uma quantidade maior que 0');
+        return;
+    }
+
     // Adiciona o produto ao display do carrinho
     carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto"><span class="texto-azul"> ${quantidade} </span> ${nomeProduto} <span class="texto-azul">${subTotal}</span></section>`;
 
