@@ -15,8 +15,13 @@ function adicionar() {
     var subTotal = valorProduto * quantidade; // Calcula o subtotal
     var carrinho = document.getElementById('lista-produtos'); // Obtém o elemento do carrinho
 
-    if (quantidade <= 0 || quantidade == '' || quantidade == null || quantidade == undefined) {
-        alert('Selecione uma quantidade maior que 0');
+    // Valida o produto e a quantidade
+    if (produto == '' || produto == null || produto == undefined || quantidade <= 0 || quantidade == '' || quantidade == null || quantidade == undefined) {
+        if (produto == '' || produto == null || produto == undefined) {
+            alert('Selecione um produto');
+        } else {
+            alert('Selecione uma quantidade maior que 0');
+        }
         return;
     }
 
