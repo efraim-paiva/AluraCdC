@@ -1,6 +1,5 @@
 var valorTotal = 0;
-document.getElementById('quantidade').value = 1;
-
+limpar();
 
 function adicionar() {
 
@@ -21,5 +20,13 @@ function adicionar() {
 }
 
 function limpar() {
+
+    valorTotal = 0;
+
+    document.getElementById('quantidade').value = 1;
+
+    document.getElementById('lista-produtos').innerHTML = '';
+
+    document.getElementById('valor-total').textContent = 'R$ 0';
 
 }
